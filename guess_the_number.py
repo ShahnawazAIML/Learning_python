@@ -13,10 +13,10 @@ user = ask()
 
 while user != compNumber:
     if user > compNumber:
-        print("Your number is greater then computer guessed number")
+        print("Your number is smaller then computer guessed number")
         user = ask()
     else:
-        print("Your number is smaller then computer guessed number")
+        print("Your number is greater then computer guessed number")
         user = ask()
     
 
