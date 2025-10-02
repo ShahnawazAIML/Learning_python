@@ -1,9 +1,19 @@
-to_do = {
-    1 : ["Build ",False],
-    2 : ["Build something",False],
-    3 : ["in python",False],
-    4 : ["Build  an to do list",False]
-}
+to_do = [
+    ["Build ",False],
+    ["Build something",False],
+    ["in python",False],
+    ["Build  an to do list",False]
+]
+# task_id = input("Enter task ID to delete: ").strip()
+# edit_to_do = input("Write new to do here: ")
+# if task_id in to_do.keys():
+#     edit_to_do = input("Write new to do here: ")
+#     to_do[task_id] = edit_to_do
+#     print(f"Updated task: {to_do[task_id]}")
+# else:
+#     print("Task ID not found.")
+
+# print(to_do[0][1])
 
 def add():
     task_text = input("Enter your task: ").strip()
@@ -25,10 +35,23 @@ def delete():
     except ValueError:
         print("Invalid input! Please enter a valid task ID.")
 
+def edit():
+    try:
+        task_id = int(input("Enter task ID to delete: ").strip())
+        edit_to_do = input("Write new to do here: ")
+        # to_do.get(task_id) = edit_to_do
+    except ValueError:
+        print("Invalid input! Please enter a valid task ID.")
 
+a = 0
 def showAll(): 
-    for i in range(1, len(to_do) + 1):
-        print(f"{i} : {to_do.get(i)[0]} ---> status: {to_do.get(i)[1]}")
+    for idx in range(0, len(to_do) + 1):
+        print(f"{idx + 1} : {to_do}")
+
+# def showAll():
+#     for idx, (task_id, task_data) in enumerate(to_do.items(), start=1):
+#         print(f"{idx} : {task_id} ---> Task: {task_data[idx]} | Status: {task_data[1]}")
+
 
 
 def ask():
